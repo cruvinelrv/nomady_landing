@@ -1,6 +1,5 @@
 // ignore_for_file: avoid_print, sized_box_for_whitespace
 import 'package:flutter/material.dart';
-import 'package:nomady_design_system/nomady_design_system.dart';
 
 class LandingHomePage extends StatefulWidget {
   const LandingHomePage({Key? key}) : super(key: key);
@@ -71,45 +70,30 @@ class _LandingHomePageState extends State<LandingHomePage> {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                DsButtonSave(
-                  onpressed: () =>
-                      Navigator.pushNamed(context, '/landingmobile'),
+              children: const [
+                Text(
+                  'O que é ser nômade?',
+                  style: TextStyle(fontSize: 30),
                 ),
-                DsButtonSave(
-                  onpressed: () => Navigator.pushNamed(context, '/auth/'),
+                Text(
+                  'Nossa proposta é criar uma plataforma com módulos que irão ajudar você a possuir a liberdade em várias áreas da sua vida com o objetivo de viver o nomadismo digital, com uma pitada de minimalismo.',
+                  style: TextStyle(fontSize: 20),
                 ),
-                const DsButtonSave(),
-                Container(
-                  alignment: Alignment.topRight,
-                  color: Colors.amber,
-                  height: 200,
-                  width: double.infinity,
-                  child: Column(
-                    children: [
-                      const Text('Landing Page',
-                          style: TextStyle(fontSize: 24)),
-                      Switch.adaptive(
-                        value: isSwitched,
-                        onChanged: (value) =>
-                            setState(() => isSwitched = value),
-                      ),
-                    ],
-                  ),
+                Text(
+                  'Landing Web',
+                  style: TextStyle(fontSize: 20),
                 ),
-                const Expanded(
-                  flex: 1,
-                  child: Text(
-                    'Landing Page',
-                    style: TextStyle(fontSize: 24),
-                  ),
+                Text(
+                  'Landing Mobile',
+                  style: TextStyle(fontSize: 20),
                 ),
-                const Expanded(
-                  flex: 1,
-                  child: Text(
-                    'Landing Page',
-                    style: TextStyle(fontSize: 24),
-                  ),
+                Text(
+                  'Login',
+                  style: TextStyle(fontSize: 20),
+                ),
+                Text(
+                  'Pet Amigo',
+                  style: TextStyle(fontSize: 20),
                 ),
               ],
             ),
